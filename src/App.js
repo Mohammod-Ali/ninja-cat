@@ -8,7 +8,7 @@ function App() {
   const loadData = () => {
     window.location.reload();
   };
-  
+
   //data load from API
   useEffect(() => {
     axios.get("https://catfact.ninja/fact").then(function reloadData(response) {
@@ -34,7 +34,7 @@ function App() {
             }}
           />
         </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div className="mx-auto max-w-2xl ">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
            
           </div>
@@ -44,6 +44,7 @@ function App() {
             </h1>
           
             <div className="mt-10 flex items-center justify-center gap-x-6">
+            {/* Refresh button */}
             <button className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" onClick={loadData}>Refresh</button>
            
             </div>
